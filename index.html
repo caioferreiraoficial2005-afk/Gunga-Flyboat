@@ -201,6 +201,23 @@ footer .c{text-align:center}footer .d{text-align:right}
 .tela span{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:40px 16px 16px;color:#fff;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-align:center;background:linear-gradient(0deg,rgba(6,34,52,.75),rgba(6,34,52,0))}
 .painel .tb{font-size:13px;font-weight:600;opacity:.9;margin:-8px auto 22px}
 @media (max-width:900px){.capa-b{margin-top:18px}.telas{grid-template-columns:1fr;max-width:300px}}
+
+/* ONDE FICA */
+.onde{position:relative;z-index:6;background:var(--bg);padding:clamp(100px,10vw,160px) 24px clamp(100px,10vw,160px)}
+.mapa{max-width:1280px;margin:clamp(56px,6vw,90px) auto 0;padding:0 clamp(0px,3vw,40px);display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(36px,5vw,80px);align-items:center}
+.mapa .k{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--azul)}
+.mapa h3{font-family:"YS",serif;font-weight:400;font-size:clamp(32px,3vw,46px);line-height:1.1;margin-top:10px;color:var(--tinta)}
+.mapa .bairro{margin-top:8px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.perto{list-style:none;margin:28px 0 32px;border-top:1px solid var(--linha)}
+.perto li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--linha)}
+.perto b{font-weight:600;font-size:15px}
+.perto span{font-size:13px;color:var(--muted);text-align:right}
+.perto li{text-align:left}
+.mapa .btn svg{fill:#fff}
+.mapa-box{position:relative;display:block;aspect-ratio:16/11;background:#dfe6ea;overflow:hidden;box-shadow:0 30px 70px rgba(11,53,80,.16)}
+.mapa-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none}
+.mapa-chip{position:absolute;right:16px;bottom:16px;padding:11px 16px;background:var(--verm);color:#fff;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+@media (max-width:900px){.mapa{grid-template-columns:1fr}.mapa-t{text-align:center}.mapa-box{aspect-ratio:4/3.4}.onde{padding-top:90px}}
 </style>
 </head>
 <body>
@@ -213,7 +230,7 @@ footer .c{text-align:center}footer .d{text-align:right}
 <nav id="nav">
   <div class="nl"><span class="lang"><b>PT</b> | EN</span><a href="#porque">Sobre</a><a href="#veja">Vídeos</a><a href="#destinos">O voo</a></div>
   <a class="logo" href="#topo"><span>Gunga Flyboat</span><small>BARCO VOADOR · PRAIA DO GUNGA</small></a>
-  <div class="nl r"><a href="#reservar">Reservar</a><a href="#avaliacoes">Avaliações</a><a href="#contato">Contato</a></div>
+  <div class="nl r"><a href="#reservar">Reservar</a><a href="#avaliacoes">Avaliações</a><a href="#onde">Onde fica</a><a href="#contato">Contato</a></div>
 </nav>
 
 <!-- CAPA -->
@@ -280,6 +297,28 @@ footer .c{text-align:center}footer .d{text-align:right}
     <article class="dep fade"><div class="dep-top"><span class="av" style="background:#2b7bb9">T</span><span><b>Tiago P.</b><small>há 11 meses</small></span><svg><use href="#g"/></svg></div><span class="est">★★★★★</span><p>Passeio incrível e muito seguro! A vista é maravilhosa! Vale muito a pena! O Jorge é um piloto muito experiente e gente boa!</p></article>
     <article class="dep fade"><div class="dep-top"><span class="av" style="background:#d8344f">R</span><span><b>Rubiana F.</b><small>há 2 anos</small></span><svg><use href="#g"/></svg></div><span class="est">★★★★★</span><p>Venci o medo! A vista lá de cima é incrivelmente linda!</p></article>
     <article class="dep fade"><div class="dep-top"><span class="av" style="background:#0b3550">D</span><span><b>Dalva L.</b><small>há 3 anos</small></span><svg><use href="#g"/></svg></div><span class="est">★★★★★</span><p>Melhor experiência da minha vida! O passeio é incrível, indispensável no roteiro da viagem.</p></article>
+  </div>
+</section>
+
+<!-- ONDE FICA -->
+<section class="onde" id="onde">
+  <div class="tit"><span class="n">05</span><h2 class="split">Onde a gente voa</h2></div>
+  <div class="mapa">
+    <div class="mapa-t fade">
+      <span class="k">Localização</span>
+      <h3>Praia do Gunga</h3>
+      <p class="bairro">Fazenda Gunga · Roteiro · AL</p>
+      <ul class="perto">
+        <li><b>Saída do voo</b><span>na areia da Praia do Gunga</span></li>
+        <li><b>Barra de São Miguel</b><span>do outro lado da lagoa</span></li>
+        <li><b>Maceió</b><span>cerca de 1h de carro</span></li>
+      </ul>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Gunga%20Barco%20Voador%2C%20Fazenda%20Gunga%2C%20Roteiro%20-%20AL&amp;query_place_id=ChIJGSSgcOj_AwcR4urxBY1n4PA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Como chegar</a>
+    </div>
+    <a class="mapa-box fade" href="https://www.google.com/maps/search/?api=1&amp;query=Gunga%20Barco%20Voador%2C%20Fazenda%20Gunga%2C%20Roteiro%20-%20AL&amp;query_place_id=ChIJGSSgcOj_AwcR4urxBY1n4PA" target="_blank" rel="noopener" aria-label="Abrir a localização do Gunga Flyboat no Google Maps">
+      <iframe src="https://maps.google.com/maps?q=-9.8603639,-35.9061978&amp;z=14&amp;output=embed" title="Mapa da Praia do Gunga" loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="-1"></iframe>
+      <span class="mapa-chip">Como chegar ↗</span>
+    </a>
   </div>
 </section>
 
